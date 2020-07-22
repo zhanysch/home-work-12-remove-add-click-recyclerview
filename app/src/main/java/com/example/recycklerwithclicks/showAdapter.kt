@@ -9,9 +9,6 @@ import kotlinx.android.synthetic.main.item_show.view.*
 class showAdapter:RecyclerView.Adapter<showAdapter.showVh>() {
     private var data = arrayListOf<Dataclass>()
 
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): showVh {
         val view= LayoutInflater.from(parent.context).inflate(R.layout.item_show,parent,false)
         return showVh(view)
@@ -35,7 +32,7 @@ class showAdapter:RecyclerView.Adapter<showAdapter.showVh>() {
         }
     }
 
-      fun add(item: Dataclass){
+    fun add(item: Dataclass){
           data.add(item)
           notifyItemInserted(1)
 
@@ -46,8 +43,6 @@ class showAdapter:RecyclerView.Adapter<showAdapter.showVh>() {
             itemView.text1.text=item.tv
             itemView.text2.text=item.tv1
             itemView.image.setBackgroundResource(item.imagesh)
-
         }
     }
-
 }
